@@ -1,9 +1,11 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,5 +23,14 @@ class MainActivity : AppCompatActivity() {
             valor ++
             caixa.text = valor.toString()
         }
+    }
+
+    fun listUsers(view: View) {
+        val intent = Intent(this, ListUsers::class.java)
+        val bundle = Bundle()
+        bundle.putString("hello", "world")
+
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 }
