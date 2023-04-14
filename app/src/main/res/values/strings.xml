@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="enter_your_text_here">Enter_your_text_here</string>
 </resources>
